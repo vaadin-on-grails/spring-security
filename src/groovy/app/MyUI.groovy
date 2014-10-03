@@ -14,7 +14,7 @@ import com.vaadin.ui.VerticalLayout
 class MyUI extends UI {
 
     @Override
-    protected void init(VaadinRequest vaadinRequest) {
+    protected void init(VaadinRequest r) {
 
         VerticalLayout layout = new VerticalLayout()
         layout.setMargin(true)
