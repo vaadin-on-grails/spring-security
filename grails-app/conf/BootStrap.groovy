@@ -1,5 +1,5 @@
-import spring.security.Role
-import spring.security.User
+import app.security.Role
+import app.security.User
 
 class BootStrap {
 

@@ -1,4 +1,4 @@
-package spring.security
+package app.security
 
 class Role {
 

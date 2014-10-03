@@ -3,7 +3,6 @@ package app.security
 import com.vaadin.navigator.View
 import org.springframework.security.authentication.InternalAuthenticationServiceException
 import org.springframework.security.core.Authentication
-import org.springframework.security.core.AuthenticationException
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.context.SecurityContextHolder
 

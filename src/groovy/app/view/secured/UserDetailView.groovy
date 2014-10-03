@@ -1,0 +1,16 @@
+package app.view.secured
+
+import com.vaadin.navigator.View
+import com.vaadin.navigator.ViewChangeListener
+import com.vaadin.ui.Label
+import com.vaadin.ui.VerticalLayout
+
+class UserDetailView extends VerticalLayout implements View {
+
+    static final String VIEW_NAME = "secured-detail"
+
+    @Override
+    void enter(ViewChangeListener.ViewChangeEvent event) {
+        addComponent(new Label("Secured details"))
+    }
+}

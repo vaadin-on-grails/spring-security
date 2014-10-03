@@ -17,7 +17,6 @@ class MyUI extends UI {
     protected void init(VaadinRequest r) {
 
         VerticalLayout layout = new VerticalLayout()
-        layout.setMargin(true)
 
         Navigator navigator = new Navigator(this, this)
 
@@ -28,7 +27,7 @@ class MyUI extends UI {
         navigator.addView(UserDataView.VIEW_NAME, UserDataView)
 
         ViewSecurity.add(LoginView, null)
-        ViewSecurity.add(UserDataView, ['USER'])
+        ViewSecurity.add(UserDataView, ['ADMIN'])
 
         navigator.navigateTo(LoginView.VIEW_NAME)
 

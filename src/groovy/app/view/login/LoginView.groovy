@@ -1,8 +1,6 @@
 package app.view.login
 
 import app.security.Auth
-import app.view.home.HomeView
-import app.view.item.ItemsView
 import app.view.secured.UserDataView
 import com.vaadin.navigator.View
 import com.vaadin.navigator.ViewChangeListener
@@ -21,6 +19,8 @@ class LoginView extends VerticalLayout implements View {
 
     @Override
     void enter(ViewChangeListener.ViewChangeEvent viewChangeEvent) {
+        setMargin(true)
+
         TextField txnUsername = new TextField("Username")
         TextField txnPassword = new TextField("Password")
         Button btnLogin = new Button("Login")
@@ -42,14 +42,14 @@ class LoginView extends VerticalLayout implements View {
                     List<GrantedAuthority> authorities = auth.authorities
                     // TODO: do whatever you need to do base on roles (ADMIN, USER, ...)
                     if ('ADMIN' in authorities*.authority) {
-                        current.navigator.navigateTo(UserDataView.VIEW_NAME) // TODO: missing!!! in the book
+                        current.navigator.navigateTo(UserDataView.VIEW_NAME)
                     } else {
-                        current.navigator.navigateTo(ItemsView.VIEW_NAME) // TODO: missing!!! in the book
+                        current.navigator.navigateTo(LoginView.VIEW_NAME)
                     }
 
                 } catch (BadCredentialsException e) {
                     // TODO: handle error flow
-                    current.navigator.navigateTo(HomeView.VIEW_NAME) // TODO: missing!!! in the book
+                    current.navigator.navigateTo(LoginView.VIEW_NAME)
                 }
             }
         })
